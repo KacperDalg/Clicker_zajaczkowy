@@ -17,6 +17,7 @@ const divKoszt2 = document.getElementById("koszt2");
 const divKasaGlobalna = document.getElementById("kasa-globalna");
 const divPalarnia = document.getElementById("palarnia");
 const divKoparka = document.getElementById("koparka");
+const divRanga = document.getElementById("nazwa-rangi");
 
 function klik() {
 	kasa += perKlik;
@@ -57,6 +58,12 @@ function wypisanie() {
 	divKoparka.innerHTML = koparka;
 	divKoszt2.innerHTML = kosztUlepszenia2;
 	divKoszt.innerHTML = kosztUlepszenia1;
+}
+
+function ranga() {
+	if (szacunek >= 2) {
+		divRanga.innerHTML = "Początkujący"
+	}
 }
 
 function upgrade(p) {
