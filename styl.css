@@ -70,9 +70,11 @@ section {
 .stat {
 	height: 80px;
 	padding: 10px;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 2px solid lightgray;
+	border-top: 2px solid transparent;
 	line-height: 30px;
 	transition: .5s;
+	font-size: 15px;
 	cursor: pointer;
 }
 
@@ -83,6 +85,10 @@ section {
 .upgrade:hover {
 	background-color: lightgray;
 	border-color: #2d409a;
+}
+
+.first-section:hover {
+	border-top: 2px solid transparent;
 }
 
 button {
