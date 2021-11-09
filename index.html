@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Clicker Zajączkowy</title>
+	<link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+	<header>
+		<h1>Symulator Zajączka</h1>
+	</header>
+	<div id="wrap">
+		<div id="container-row">
+			<section id="ulepszenia">
+				<div id="szacun">
+					<p>Szacunek: <span id="respect">0</span></p>
+				</div>
+				<div onclick="upgrade(1)" class="upgrade">Palarnia<br />Koszt: <span id="koszt1">50</span>
+					<div class="description-upgrade">
+						<div class="description-title">
+							<h4>Wyjdź na palarnie</h4>
+						</div>
+						<div class="description-content">
+							<p>Wychodzisz na palarnie! Być może nie jest to wielki krok dla człowieka za to ogromny
+								postęp dla twojej kariery Zajączka!</p>
+						</div>
+					</div>
+				</div>
+				<div onclick="upgrade(2)" class="upgrade">Koparka<br/>Koszt: <span id="koszt2">100</span>
+				<div class="description-upgrade">
+						<div class="description-title">
+							<h4>Zainstaluj koparkę krypto</h4>
+						</div>
+						<div class="description-content">
+							<p>Dzięki zajęciom zawodowym poznajesz nowe technologie zarabiania pieniędzy. Od teraz możesz kopać kryptowaluty na szkolnym komputerze.</p>
+						</div>
+					</div>
+					</div>
+				<div class="upgrade">ulepszenie3</div>
+				<div class="upgrade">ulepszenie4</div>
+			</section>
+			<div id="container-column">
+				<button id="button" onclick="klik()">Zbieraj kase</button>
+				<div id="klik">Na kliknięcie: <span id="per_click">1</span></div>
+				<div id="passive">Na sekundę: <span id="per_second">0</span></div>
+				<div id="rank">
+					<div id="ranga">
+						<p>Pierwszak</p>
+					</div>
+					<div id="image"><img src="img/pierwszak.jpg"></div>
+				</div>
+			</div>
+			<section id="stats">
+				<div id="kasa">
+					<p>Kasa: <span id="hajs">0</span></p>
+				</div>
+				<div class="stat">Ile zarobiłeś ogółem:<br/><span id="kasa-globalna">0</span></div>
+				<div class="stat">Ile razy byłeś na palarni:<br/><span id="palarnia">0</span></div>
+				<div class="stat">Ile masz koparek:<br/><span id="koparka">0</span></div>
+				<div class="stat">stat</div>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

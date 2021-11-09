@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	min-height: 1vh;
+}
+
+header {
+	width: 100%;
+	height: 150px;
+	background-color: #2d409a;
+	color: #FFF;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+header h1 {
+	line-height: 150px;
+}
+
+#container-row {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+#container-column {
+	display: flex;
+	flex-direction: column;
+}
+
+section {
+	border: 2px solid #2d409a;
+	border-radius: 10px;
+	width: 200px;
+	text-align: center;
+	min-height: 400px;
+}
+
+.description-upgrade {
+	display: none;
+	height: 300px;
+	width: 300px;
+	border: 2px solid rgb(45, 64, 154);
+	position: relative;
+	top: -72px;
+	left: -310px;
+	transition: 3s;
+}
+
+.description-title {
+	height: 20%;
+	width: 100%;
+	border-bottom: 1px solid #2d409a;
+	line-height: 60px;
+}
+
+.description-content {
+	height: 80%;
+	width: 100%;
+	line-height: 30px;
+	padding: 10px;
+}
+
+.upgrade, .stat {
+	height: 80px;
+	padding: 10px;
+	border-bottom: 1px solid lightgray;
+	line-height: 30px;
+	transition: .5s;
+	cursor: pointer;
+}
+
+.upgrade:hover .description-upgrade {
+	display: block;
+}
+
+.upgrade:hover {
+	background-color: lightgray;
+	border-color: #2d409a;
+}
+
+button {
+	color: white;
+	border-radius: 10px;
+	background-color: #2d409a;
+	height: 100px;
+	width: 300px;
+	border: 0;
+	font-size: 20px;
+	cursor: pointer;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 25px;
+}
+
+#rank {
+	border: 4px solid #2d409a;
+	border-radius: 10px;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	margin-top: 25px;
+	overflow: hidden;
+}
+
+#button,
+#klik,
+#passive {
+	text-align: center;
+}
+
+#ranga {
+	width: 100%;
+	height: 20%;
+	border-bottom: 2px solid #2d409a;
+	text-align: center;
+}
+
+#ranga p {
+	color: #2d409a;
+	line-height: 60px;
+	font-size: 20px;
+}
+
+#image {
+	height: 80%;
+	width: 100%;
+}
+
+#image img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+#kasa {
+	width: 100%;
+	height: 70px;
+	border-bottom: 2px solid #2d409a;
+	text-align: center;
+}
+
+#kasa p {
+	color: #2d409a;
+	line-height: 70px;
+	font-size: 20px;
+}
+
+#szacun {
+	width: 100%;
+	height: 70px;
+	border-bottom: 2px solid #2d409a;
+	text-align: center;
+}
+
+#szacun p {
+	color: #2d409a;
+	line-height: 70px;
+	font-size: 20px;
+}
