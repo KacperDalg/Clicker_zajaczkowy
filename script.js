@@ -64,6 +64,7 @@ function ranga() {
 		divRanga.innerHTML = "Początkujący Zajączek";
 	}
 }
+//jnfjjfjjfjfjfjjfjjfjjfjjfj
 
 function upgrade(p) {
 	if (p == 1 && kasa >= kosztUlepszenia1) {
