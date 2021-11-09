@@ -1,7 +1,8 @@
+//test
 let szacunek = 0;
 let perKlik = 1;
 let perSecond = 0;
-let kasaGlobalna=0;
+let kasaGlobalna = 0;
 let kasa = 0;
 let koparka = 0;
 let palarnia = 0;
@@ -19,12 +20,12 @@ const divKoparka = document.getElementById("koparka");
 
 function klik() {
 	kasa += perKlik;
-	kasaGlobalna+=perKlik;
+	kasaGlobalna += perKlik;
 	wypisanie();
 }
 
 function naSekunde() {
-	kasaGlobalna+=perSecond;
+	kasaGlobalna += perSecond;
 	kasa += perSecond;
 	divHajs.innerHTML = kasa;
 	wypisanie();
@@ -33,7 +34,7 @@ function naSekunde() {
 function upgrade1() {
 	kasa = kasa - kosztUlepszenia1;
 	perKlik += 1;
-	palarnia+=1;
+	palarnia += 1;
 	szacunek += 1;
 	kosztUlepszenia1 = parseInt(kosztUlepszenia1 * 1.5);
 	divKoszt.innerHTML = kosztUlepszenia1;
@@ -42,7 +43,7 @@ function upgrade1() {
 function upgrade2() {
 	kasa = kasa - kosztUlepszenia2;
 	perSecond += 1;
-	koparka+=1;
+	koparka += 1;
 	szacunek += 2;
 	kosztUlepszenia2 = parseInt(kosztUlepszenia2 * 1.5);
 	divKoszt2.innerHTML = kosztUlepszenia2;
