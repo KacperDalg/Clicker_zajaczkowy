@@ -62,12 +62,11 @@ function wypisanie() {
 function upgrade(p) {
 	if (p == 1 && kasa >= kosztUlepszenia1) {
 		upgrade1();
-		wypisanie();
 	}
 	if (p == 2 && kasa >= kosztUlepszenia2) {
 		upgrade2();
-		wypisanie();
 	}
+	wypisanie();
 }
 
 window.setInterval(naSekunde, 1000)
