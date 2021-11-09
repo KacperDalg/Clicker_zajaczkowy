@@ -37,7 +37,6 @@ function upgrade1() {
 	palarnia += 1;
 	szacunek += 1;
 	kosztUlepszenia1 = parseInt(kosztUlepszenia1 * 1.5);
-	divKoszt.innerHTML = kosztUlepszenia1;
 }
 
 function upgrade2() {
@@ -46,7 +45,6 @@ function upgrade2() {
 	koparka += 1;
 	szacunek += 2;
 	kosztUlepszenia2 = parseInt(kosztUlepszenia2 * 1.5);
-	divKoszt2.innerHTML = kosztUlepszenia2;
 }
 
 function wypisanie() {
@@ -57,6 +55,8 @@ function wypisanie() {
 	divKasaGlobalna.innerHTML = kasaGlobalna;
 	divPalarnia.innerHTML = palarnia;
 	divKoparka.innerHTML = koparka;
+	divKoszt2.innerHTML = kosztUlepszenia2;
+	divKoszt.innerHTML = kosztUlepszenia1;
 }
 
 function upgrade(p) {
