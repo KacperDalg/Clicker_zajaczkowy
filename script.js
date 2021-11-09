@@ -1,4 +1,4 @@
-//testtesttest
+//testtesttesttest
 let szacunek = 0;
 let perKlik = 1;
 let perSecond = 0;
