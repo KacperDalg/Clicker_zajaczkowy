@@ -71,7 +71,7 @@ section {
 	height: 80px;
 	padding: 10px;
 	border-bottom: 2px solid lightgray;
-	border-top: 2px solid transparent;
+	border-top: 0;
 	line-height: 30px;
 	transition: .5s;
 	font-size: 15px;
@@ -85,10 +85,6 @@ section {
 .upgrade:hover {
 	background-color: lightgray;
 	border-color: #2d409a;
-}
-
-.first-section:hover {
-	border-top: 2px solid transparent;
 }
 
 button {
