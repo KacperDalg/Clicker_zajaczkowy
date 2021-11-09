@@ -61,8 +61,8 @@ function wypisanie() {
 }
 
 function ranga() {
-	if (szacunek >= 2) {
-		divRanga.innerHTML = "Początkujący"
+	if (szacunek >= 10) {
+		divRanga.innerHTML = "Początkujący Zajączek";
 	}
 }
 //jnfjjfjjfjfjfjjfjjfjjfjjfj
@@ -75,6 +75,7 @@ function upgrade(p) {
 		upgrade2();
 	}
 	wypisanie();
+	ranga();
 }
 
 window.setInterval(naSekunde, 1000)
