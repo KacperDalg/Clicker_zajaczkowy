@@ -194,7 +194,6 @@ button {
 #image>p:hover {
 	color: white;
 	backdrop-filter: blur(4px) grayscale(0.7) brightness(0.4);
-
 }
 
 #kasa {
