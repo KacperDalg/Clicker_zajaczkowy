@@ -178,19 +178,9 @@ button {
 	background-size: cover;
 	background-position: center;
 	transition: .5s;
-}
-
-#image>p {
-	display: none;
-}
-
-#image:hover {
-	filter: blur(4px) grayscale(1);
-}
-
-#image:hover #image>p {
-	color: yellow;
-	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
 #kasa {
