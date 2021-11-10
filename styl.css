@@ -44,7 +44,7 @@ section {
 .description-upgrade,
 .description-stat {
 	display: none;
-	height: 300px;
+	min-height: 300px;
 	width: 300px;
 	border: 2px solid rgb(45, 64, 154);
 	position: relative;
@@ -65,10 +65,25 @@ section {
 }
 
 .description-content {
-	height: 80%;
+	height: 70%;
 	width: 100%;
 	line-height: 30px;
 	padding: 10px;
+}
+
+.description-achievement {
+	min-height: 10%;
+	width: 80%;
+	padding: 10px;
+	margin: auto;
+	margin-bottom: 10px;
+	background-color: lightgray;
+	border: 1px solid #2d409a;
+	border-radius: 10px;
+}
+
+.description-achievement p {
+	color: darkgrey;
 }
 
 .upgrade,
