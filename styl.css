@@ -71,6 +71,14 @@ section {
 	padding: 10px;
 }
 
+.achievements {
+	color: #2d409a;
+	border-top: 1px solid #2d409a;
+	font-size: 20px;
+	font-style: oblique;
+	padding: 5px;
+}
+
 .description-achievement {
 	min-height: 10%;
 	width: 80%;
