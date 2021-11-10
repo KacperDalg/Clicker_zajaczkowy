@@ -174,9 +174,23 @@ button {
 #image {
 	height: 80%;
 	width: 100%;
-	background-image: url("img/pierwszak.jpg");
+	background-image: url('img/pierwszak.jpg');
 	background-size: cover;
 	background-position: center;
+	transition: .5s;
+}
+
+#image>p {
+	display: none;
+}
+
+#image:hover {
+	filter: blur(4px) grayscale(1);
+}
+
+#image:hover #image>p {
+	color: yellow;
+	display: block;
 }
 
 #kasa {
