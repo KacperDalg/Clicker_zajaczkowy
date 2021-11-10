@@ -79,6 +79,14 @@ section {
 	padding: 5px;
 }
 
+#palarnia-description {
+	top: -152px;
+}
+
+#koparka-description {
+	top: -232px;
+}
+
 .description-achievement {
 	min-height: 10%;
 	width: 80%;
