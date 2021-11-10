@@ -181,16 +181,20 @@ button {
 }
 
 #image>p {
-	display: none;
-}
-
-#image:hover {
-	filter: blur(4px) grayscale(1);
-}
-
-#image:hover #image>p {
-	color: yellow;
 	display: block;
+	color: transparent;
+	height: 100%;
+	transition: .5s;
+	margin: auto;
+	text-align: center;
+	padding: 15px;
+	line-height: 150%;
+}
+
+#image>p:hover {
+	color: white;
+	backdrop-filter: blur(4px) grayscale(0.7) brightness(0.4);
+
 }
 
 #kasa {
