@@ -41,7 +41,8 @@ section {
 	min-height: 400px;
 }
 
-.description-upgrade {
+.description-upgrade,
+.description-stat {
 	display: none;
 	height: 300px;
 	width: 300px;
@@ -50,6 +51,10 @@ section {
 	top: -72px;
 	left: -310px;
 	transition: 3s;
+}
+
+.description-stat {
+	left: 186px;
 }
 
 .description-title {
@@ -75,15 +80,20 @@ section {
 	line-height: 30px;
 	transition: .5s;
 	font-size: 15px;
-	cursor: pointer;
 }
 
-.upgrade:hover .description-upgrade {
+.upgrade:hover .description-upgrade,
+.stat:hover .description-stat {
 	display: block;
 }
 
 .upgrade:hover {
 	background-color: lightgray;
+	border-color: #2d409a;
+	cursor: pointer;
+}
+
+.stat:hover {
 	border-color: #2d409a;
 }
 

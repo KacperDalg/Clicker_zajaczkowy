@@ -61,7 +61,7 @@ function wypisanie() {
 }
 
 function ranga() {
-	if (szacunek >= 10) {
+	if (szacunek >= 2) {
 		divRanga.innerHTML = "Początkujący Zajączek";
 		image.src = "img/cool_kid.jpg";
 	}
