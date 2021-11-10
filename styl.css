@@ -177,7 +177,6 @@ button {
 	background-image: url('img/pierwszak.jpg');
 	background-size: cover;
 	background-position: center;
-	transition: .5s;
 }
 
 #image>p {
@@ -189,6 +188,8 @@ button {
 	text-align: center;
 	padding: 15px;
 	line-height: 150%;
+	backdrop-filter: blur(0px) grayscale(0) brightness(1);
+	transition: 0s;
 }
 
 #image>p:hover {
