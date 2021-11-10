@@ -17,6 +17,7 @@ const divKasaGlobalna = document.getElementById("kasa-globalna");
 const divPalarnia = document.getElementById("palarnia");
 const divKoparka = document.getElementById("koparka");
 const divRanga = document.getElementById("nazwa-rangi");
+const image = document.getElementById("rank-image");
 
 function klik() {
 	kasa += perKlik;
@@ -62,6 +63,7 @@ function wypisanie() {
 function ranga() {
 	if (szacunek >= 10) {
 		divRanga.innerHTML = "Początkujący Zajączek";
+		image.src = "img/cool_kid.jpg";
 	}
 }
 
