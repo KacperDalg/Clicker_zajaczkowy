@@ -118,7 +118,7 @@ section {
 	display: block;
 }
 
-.higher:hover .description-upgrade {
+.blocked:hover .description-upgrade {
 	display: none;
 }
 
