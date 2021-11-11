@@ -72,14 +72,14 @@ function wypisanie() {
 	divKoszt.innerHTML = kosztUlepszenia1;
 	if (szacunek >= 10) {
 		upgrade3Face.innerHTML = "Świecący tytoń<br/>Koszt: <span id='koszt3'>200</span>";
-		divUpgrade3.classList.remove("higher");
+		divUpgrade3.classList.remove("blocked");
 		divKoszt3.innerHTML = kosztUlepszenia3;
 	}
 }
 
 function ranga() {
 	if (szacunek >= 10) {
-		divRanga.innerHTML = "Miłośnik biologii";
+		divRanga.innerHTML = "Adept biologii";
 		opisRangi.innerHTML = "Poznajesz zasady hodowli super myszy i dowiadujesz się jak zasadzić świecący tytoń. Wykorzystaj dobrze tą wiedzę.";
 		image.style.backgroundImage = "url('img/cool_kid.jpg')";
 	}
@@ -92,7 +92,7 @@ function upgrade(p) {
 	if (p == 2 && kasa >= kosztUlepszenia2) {
 		upgrade2();
 	}
-	if (p == 3 && kasa >= kosztUlepszenia2) {
+	if (p == 3 && szacunek >= 10 && kasa >= kosztUlepszenia2) {
 		upgrade3();
 	}
 	wypisanie();
