@@ -17,8 +17,8 @@
 				<div id="szacun">
 					<p>Szacunek: <span id="respect">0</span></p>
 				</div>
-				<div onclick="upgrade(1)" class="upgrade">Palarnia (+1 na kliknięcie)<br />Koszt: <span
-						id="koszt1">50</span>
+				<div onclick="upgrade(1)" class="upgrade">
+					<p>Palarnia (+1 na kliknięcie)<br />Koszt: <span id="koszt1">50</span></p>
 					<div class="description-upgrade">
 						<div class="description-title">
 							<h4>Wyjdź na palarnie</h4>
@@ -29,8 +29,8 @@
 						</div>
 					</div>
 				</div>
-				<div onclick="upgrade(2)" class="upgrade">Koparka (+1 na sekundę)<br />Koszt: <span
-						id="koszt2">100</span>
+				<div onclick="upgrade(2)" class="upgrade">
+					<p>Koparka (+1 na sekundę)<br />Koszt: <span id="koszt2">100</span></p>
 					<div class="description-upgrade">
 						<div class="description-title">
 							<h4>Zainstaluj koparkę krypto</h4>
@@ -41,8 +41,19 @@
 						</div>
 					</div>
 				</div>
-				<div class="upgrade">ulepszenie3</div>
-				<div class="upgrade">ulepszenie4</div>
+				<div onclick="upgrade(3)" class="upgrade">
+					<p id="upgrade3-face">Ulepszenie dostępne na wyższym poziomie</p>
+					<div class="description-upgrade">
+						<div class="description-title">
+							<h4>Zainstaluj koparkę krypto</h4>
+						</div>
+						<div class="description-content">
+							<p>Dzięki zajęciom zawodowym poznajesz nowe technologie zarabiania pieniędzy za pomocą
+								komputerów. Od teraz możesz kopać kryptowaluty na szkolnym komputerze.</p>
+						</div>
+					</div>
+				</div>
+				<div class="upgrade">Ulepszenie dostępne na wyższym poziomie</div>
 			</section>
 			<div id="container-column">
 				<button id="button" onclick="klik()">Zbieraj kase</button>
@@ -53,8 +64,10 @@
 						<p><span id="nazwa-rangi">Pierwszak</span></p>
 					</div>
 					<div id="image">
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae quisquam rerum
-							architecto, ratione nesciunt placeat iusto provident dignissimos suscipit deserunt.</p>
+						<p id="description-rank">Początki zawsze są trudne, ale nie martw się - każdy kiedyś zaczynał
+							jako pierwszak. Kupując
+							kolejne ulepszenia zdobędziesz szacunek, dzięki któremu nie będziesz już zwykłym
+							pierwszorocznym.</p>
 					</div>
 				</div>
 			</div>
