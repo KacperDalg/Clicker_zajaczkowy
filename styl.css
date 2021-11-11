@@ -118,6 +118,10 @@ section {
 	display: block;
 }
 
+.higher:hover .description-upgrade {
+	display: none;
+}
+
 .upgrade:hover {
 	background-color: lightgray;
 	border-color: #2d409a;

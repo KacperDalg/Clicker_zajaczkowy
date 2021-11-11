@@ -7,18 +7,22 @@ let koparka = 0;
 let palarnia = 0;
 let kosztUlepszenia1 = 50;
 let kosztUlepszenia2 = 100;
+let kosztUlepszenia3 = 200;
 const divSzacunek = document.getElementById("respect");
 const divHajs = document.getElementById("hajs");
 const divPerClick = document.getElementById("per_click");
 const divPerSecond = document.getElementById("per_second");
 const divKoszt = document.getElementById("koszt1");
 const divKoszt2 = document.getElementById("koszt2");
+const divKoszt3 = document.getElementById("koszt3");
 const divKasaGlobalna = document.getElementById("kasa-globalna");
 const divPalarnia = document.getElementById("palarnia");
 const divKoparka = document.getElementById("koparka");
 const divRanga = document.getElementById("nazwa-rangi");
 const image = document.getElementById("image");
 const opisRangi = document.getElementById("description-rank");
+const divUpgrade3 = document.getElementById("upgrade3");
+const upgrade3Face = document.getElementById("upgrade3-face");
 
 function klik() {
 	kasa += perKlik;
@@ -50,7 +54,10 @@ function upgrade2() {
 }
 
 function upgrade3() {
-	kasa = kasa - kosztUlepszenia2;
+	kasa = kasa - kosztUlepszenia3;
+	perKlik += 3;
+	szacunek += 3;
+	kosztUlepszenia3 = parseInt(kosztUlepszenia3 * 1.5);
 }
 
 function wypisanie() {
@@ -63,6 +70,11 @@ function wypisanie() {
 	divKoparka.innerHTML = koparka;
 	divKoszt2.innerHTML = kosztUlepszenia2;
 	divKoszt.innerHTML = kosztUlepszenia1;
+	if (szacunek >= 10) {
+		upgrade3Face.innerHTML = "Świecący tytoń<br/>Koszt: <span id='koszt3'>200</span>";
+		divUpgrade3.classList.remove("higher");
+		divKoszt3.innerHTML = kosztUlepszenia3;
+	}
 }
 
 function ranga() {
