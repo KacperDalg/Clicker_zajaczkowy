@@ -18,6 +18,7 @@ const divPalarnia = document.getElementById("palarnia");
 const divKoparka = document.getElementById("koparka");
 const divRanga = document.getElementById("nazwa-rangi");
 const image = document.getElementById("image");
+const opisRangi = document.getElementById("description-rank");
 
 function klik() {
 	kasa += perKlik;
@@ -48,6 +49,10 @@ function upgrade2() {
 	kosztUlepszenia2 = parseInt(kosztUlepszenia2 * 1.5);
 }
 
+function upgrade3() {
+	kasa = kasa - kosztUlepszenia2;
+}
+
 function wypisanie() {
 	divSzacunek.innerHTML = szacunek;
 	divHajs.innerHTML = kasa;
@@ -61,8 +66,9 @@ function wypisanie() {
 }
 
 function ranga() {
-	if (szacunek >= 2) {
-		divRanga.innerHTML = "Początkujący Zajączek";
+	if (szacunek >= 10) {
+		divRanga.innerHTML = "Miłośnik biologii";
+		opisRangi.innerHTML = "Poznajesz zasady hodowli super myszy i dowiadujesz się jak zasadzić świecący tytoń. Wykorzystaj dobrze tą wiedzę.";
 		image.style.backgroundImage = "url('img/cool_kid.jpg')";
 	}
 }
@@ -73,6 +79,9 @@ function upgrade(p) {
 	}
 	if (p == 2 && kasa >= kosztUlepszenia2) {
 		upgrade2();
+	}
+	if (p == 3 && kasa >= kosztUlepszenia2) {
+		upgrade3();
 	}
 	wypisanie();
 	ranga();
