@@ -5,6 +5,7 @@ let kasaGlobalna = 0;
 let kasa = 0;
 let koparka = 0;
 let palarnia = 0;
+let tyton = 0;
 let kosztUlepszenia1 = 50;
 let kosztUlepszenia2 = 100;
 let kosztUlepszenia3 = 200;
@@ -18,11 +19,14 @@ const divKoszt3 = document.getElementById("koszt3");
 const divKasaGlobalna = document.getElementById("kasa-globalna");
 const divPalarnia = document.getElementById("palarnia");
 const divKoparka = document.getElementById("koparka");
+const divTyton = document.getElementById("tyton");
 const divRanga = document.getElementById("nazwa-rangi");
 const image = document.getElementById("image");
 const opisRangi = document.getElementById("description-rank");
 const divUpgrade3 = document.getElementById("upgrade3");
 const upgrade3Face = document.getElementById("upgrade3-face");
+const divStat3 = document.getElementById("stat-tyton");
+const statTytonFace = document.getElementById("stat-tyton-face");
 
 function klik() {
 	kasa += perKlik;
@@ -56,6 +60,7 @@ function upgrade2() {
 function upgrade3() {
 	kasa = kasa - kosztUlepszenia3;
 	perKlik += 3;
+	tyton += 1;
 	szacunek += 3;
 	kosztUlepszenia3 = parseInt(kosztUlepszenia3 * 1.5);
 }
@@ -71,9 +76,12 @@ function wypisanie() {
 	divKoszt2.innerHTML = kosztUlepszenia2;
 	divKoszt.innerHTML = kosztUlepszenia1;
 	if (szacunek >= 10) {
-		upgrade3Face.innerHTML = "Świecący tytoń<br/>Koszt: <span id='koszt3'>200</span>";
+		upgrade3Face.innerHTML = "Tytoń (+3 na kliknięcie)<br/>Koszt: <span id='koszt3'>200</span>";
 		divUpgrade3.classList.remove("blocked");
-		divKoszt3.innerHTML = kosztUlepszenia3;
+		divKoszt3.innerHTML = kosztUlepszenia3; //nie zmienia kosztu ulepszenia
+		statTytonFace.innerHTML = "Ile szlugów sprzedałeś:<br/><span id='tyton'></span>";
+		divTyton.innerHTML = tyton; //nie nalicza statystyki
+		divStat3.classList.remove("blocked-stat");
 	}
 }
 
@@ -92,7 +100,7 @@ function upgrade(p) {
 	if (p == 2 && kasa >= kosztUlepszenia2) {
 		upgrade2();
 	}
-	if (p == 3 && szacunek >= 10 && kasa >= kosztUlepszenia2) {
+	if (p == 3 && szacunek >= 10 && kasa >= kosztUlepszenia3) {
 		upgrade3();
 	}
 	wypisanie();

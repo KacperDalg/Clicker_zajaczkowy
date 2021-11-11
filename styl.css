@@ -87,6 +87,10 @@ section {
 	top: -232px;
 }
 
+#tyton-description {
+	top: -312px;
+}
+
 .description-achievement {
 	min-height: 10%;
 	width: 80%;
@@ -118,7 +122,8 @@ section {
 	display: block;
 }
 
-.blocked:hover .description-upgrade {
+.blocked:hover .description-upgrade,
+.blocked-stat:hover .description-stat {
 	display: none;
 }
 
