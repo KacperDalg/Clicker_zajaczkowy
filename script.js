@@ -9,6 +9,7 @@ let tyton = 0;
 let kosztUlepszenia1 = 50;
 let kosztUlepszenia2 = 100;
 let kosztUlepszenia3 = 200;
+let achievementUsed = 0;
 const divSzacunek = document.getElementById("respect");
 const divHajs = document.getElementById("hajs");
 const divPerClick = document.getElementById("per_click");
@@ -25,7 +26,8 @@ const divUpgrade3 = document.getElementById("upgrade3");
 const upgrade3Face = document.getElementById("upgrade3-face");
 const divStat3 = document.getElementById("stat-tyton");
 const statTytonFace = document.getElementById("stat-tyton-face");
-const achievementPalarnia1 = document.getElementById("achievement-palarnia-1-div");
+const achievementPalarniaDiv1 = document.getElementById("achievement-palarnia-div-1");
+const achievementPalarniaP1 = document.getElementById("achievement-palarnia-p-1");
 
 function klik() {
 	kasa += perKlik;
@@ -46,6 +48,7 @@ function upgrade1() {
 	palarnia += 1;
 	szacunek += 1;
 	kosztUlepszenia1 = parseInt(kosztUlepszenia1 * 1.5);
+	achievement_palarnia_1();
 }
 
 function upgrade2() {
@@ -80,11 +83,6 @@ function wypisanie() {
 		statTytonFace.innerHTML = "Ile szlugów sprzedałeś:<br/><span id='tyton'>" + tyton + "</span>";
 		divStat3.classList.remove("blocked-stat");
 	}
-	if (palarnia >= 5) {
-		achievementPalarnia1.classList.add("open-achievement");
-		achievementPalarnia1.classList.remove("description-achievement");
-		document.getElementById("achievement-palarnia-1-p").innerHTML = "Content jakiś";
-	}
 }
 
 function ranga() {
@@ -112,6 +110,15 @@ function upgrade(p) {
 	}
 	wypisanie();
 	ranga();
+}
+
+function achievement_palarnia_1(achievementUsed) {
+	if (palarnia == 5) {
+		achievementPalarniaDiv1.classList.add("open-achievement");
+		achievementPalarniaDiv1.classList.remove("description-achievement");
+		achievementPalarniaP1.innerHTML = "Gratulacje, byłeś na palarni już 5 razy, dostajesz 5 kasy na klik dodatkowo";
+		perKlik = perKlik + palarnia;
+	}
 }
 
 window.setInterval(naSekunde, 1000)

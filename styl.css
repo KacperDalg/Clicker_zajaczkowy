@@ -114,12 +114,7 @@ section {
 	margin-bottom: 10px;
 	border: 1px solid #2d409a;
 	border-radius: 10px;
-	background-color: white;
-}
-
-.open-achievement:hover {
 	background-color: lightgray;
-	cursor: pointer;
 }
 
 .upgrade,
