@@ -10,9 +10,13 @@ let zalki = 0;
 let kosztUlepszenia1 = 50;
 let kosztUlepszenia2 = 100;
 let kosztUlepszenia3 = 200;
+<<<<<<< HEAD
 let kosztUlepszenia4 = 300;
 let szacunekLvl2 = 10;
 let szacunekLvl3 = 20;
+=======
+let achievementUsed = 0;
+>>>>>>> 1e133d22761119526cfc1ceaa4d935e261e8ce28
 const divSzacunek = document.getElementById("respect");
 const divHajs = document.getElementById("hajs");
 const divPerClick = document.getElementById("per_click");
@@ -29,10 +33,15 @@ const divUpgrade3 = document.getElementById("upgrade3");
 const upgrade3Face = document.getElementById("upgrade3-face");
 const divStat3 = document.getElementById("stat-tyton");
 const statTytonFace = document.getElementById("stat-tyton-face");
+<<<<<<< HEAD
 const divUpgrade4 = document.getElementById("upgrade4");
 const upgrade4Face = document.getElementById("upgrade4-face");
 const divStat4 = document.getElementById("stat-zalki");
 const statZalkiFace = document.getElementById("stat-zalki-face");
+=======
+const achievementPalarniaDiv1 = document.getElementById("achievement-palarnia-div-1");
+const achievementPalarniaP1 = document.getElementById("achievement-palarnia-p-1");
+>>>>>>> 1e133d22761119526cfc1ceaa4d935e261e8ce28
 
 function klik() {
 	kasa += perKlik;
@@ -53,6 +62,7 @@ function upgrade1() {
 	palarnia += 1;
 	szacunek += 1;
 	kosztUlepszenia1 = parseInt(kosztUlepszenia1 * 1.5);
+	achievement_palarnia_1();
 }
 
 function upgrade2() {
@@ -131,6 +141,15 @@ function upgrade(p) {
 	}
 	wypisanie();
 	ranga();
+}
+
+function achievement_palarnia_1(achievementUsed) {
+	if (palarnia == 5) {
+		achievementPalarniaDiv1.classList.add("open-achievement");
+		achievementPalarniaDiv1.classList.remove("description-achievement");
+		achievementPalarniaP1.innerHTML = "Gratulacje, byłeś na palarni już 5 razy, dostajesz 5 kasy na klik dodatkowo";
+		perKlik = perKlik + palarnia;
+	}
 }
 
 window.setInterval(naSekunde, 1000)
