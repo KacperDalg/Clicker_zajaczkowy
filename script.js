@@ -97,9 +97,9 @@ function wypisanie() {
 		divStat3.classList.remove("blocked-stat");
 	}
 	if (szacunek >= szacunekLvl3) {
-		upgrade4Face.innerHTML = "Zalki (+3 na sekundę)<br/>Koszt: <span id='koszt4'>" + kosztUlepszenia4 + "</span>";
+		upgrade4Face.innerHTML = "Zalki (+3 na sekundę)<br/>Koszt: " + kosztUlepszenia4;
 		divUpgrade4.classList.remove("blocked");
-		statZalkiFace.innerHTML = "Ile zalek podrabiasz:<br/><span id='zalki'>" + zalki + "</span>";
+		statZalkiFace.innerHTML = "Ile zalek podrabiasz:<br/>" + zalki;
 		divStat4.classList.remove("blocked-stat");
 	}
 }
