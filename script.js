@@ -33,6 +33,8 @@ const divUpgrade4 = document.getElementById("upgrade4");
 const upgrade4Face = document.getElementById("upgrade4-face");
 const divStat4 = document.getElementById("stat-zalki");
 const statZalkiFace = document.getElementById("stat-zalki-face");
+const achievementPalarniaDiv1 = document.getElementById("achievement-palarnia-div-1");
+const achievementPalarniaP1 = document.getElementById("achievement-palarnia-p-1");
 
 function klik() {
 	kasa += perKlik;
