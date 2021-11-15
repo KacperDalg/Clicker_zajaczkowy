@@ -85,6 +85,11 @@ function ranga() {
 	if (szacunek >= 10) {
 		divRanga.innerHTML = "Adept biologii";
 		opisRangi.innerHTML = "Poznajesz zasady hodowli super myszy i dowiadujesz się jak zasadzić świecący tytoń. Wykorzystaj dobrze tą wiedzę.";
+		image.style.backgroundImage = "url('img/adept_biologii.jpg')";
+	}
+	if (szacunek >= 20) {
+		divRanga.innerHTML = "Douczony mistrzu";
+		opisRangi.innerHTML = "";
 		image.style.backgroundImage = "url('img/cool_kid.jpg')";
 	}
 }
