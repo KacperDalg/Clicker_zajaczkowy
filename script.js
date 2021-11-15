@@ -95,7 +95,7 @@ function ranga() {
 	}
 	if (szacunek >= 20) {
 		divRanga.innerHTML = "Douczony mistrzu";
-		opisRangi.innerHTML = "";
+		opisRangi.innerHTML = "Coraz lepiej idzie ci zdobywanie kolejnych zalek. Znana fraza &quotDoucz się mistrzu&quot jest już dla ciebie tylko przeszłością.";
 		image.style.backgroundImage = "url('img/cool_kid.jpg')";
 	}
 }
