@@ -25,6 +25,7 @@ const divUpgrade3 = document.getElementById("upgrade3");
 const upgrade3Face = document.getElementById("upgrade3-face");
 const divStat3 = document.getElementById("stat-tyton");
 const statTytonFace = document.getElementById("stat-tyton-face");
+const achievementPalarnia1 = document.getElementById("achievement-palarnia-1-div");
 
 function klik() {
 	kasa += perKlik;
@@ -78,6 +79,11 @@ function wypisanie() {
 		divUpgrade3.classList.remove("blocked");
 		statTytonFace.innerHTML = "Ile szlugów sprzedałeś:<br/><span id='tyton'>" + tyton + "</span>";
 		divStat3.classList.remove("blocked-stat");
+	}
+	if (palarnia >= 5) {
+		achievementPalarnia1.classList.add("open-achievement");
+		achievementPalarnia1.classList.remove("description-achievement");
+		document.getElementById("achievement-palarnia-1-p").innerHTML = "Content jakiś";
 	}
 }
 

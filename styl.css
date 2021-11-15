@@ -106,6 +106,22 @@ section {
 	color: darkgrey;
 }
 
+.open-achievement{
+	min-height: 10%;
+	width: 80%;
+	padding: 10px;
+	margin: auto;
+	margin-bottom: 10px;
+	border: 1px solid #2d409a;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.open-achievement:hover {
+	background-color: lightgray;
+	cursor: pointer;
+}
+
 .upgrade,
 .stat {
 	height: 80px;
