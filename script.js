@@ -15,11 +15,9 @@ const divPerClick = document.getElementById("per_click");
 const divPerSecond = document.getElementById("per_second");
 const divKoszt = document.getElementById("koszt1");
 const divKoszt2 = document.getElementById("koszt2");
-const divKoszt3 = document.getElementById("koszt3");
 const divKasaGlobalna = document.getElementById("kasa-globalna");
 const divPalarnia = document.getElementById("palarnia");
 const divKoparka = document.getElementById("koparka");
-const divTyton = document.getElementById("tyton");
 const divRanga = document.getElementById("nazwa-rangi");
 const image = document.getElementById("image");
 const opisRangi = document.getElementById("description-rank");
@@ -76,11 +74,9 @@ function wypisanie() {
 	divKoszt2.innerHTML = kosztUlepszenia2;
 	divKoszt.innerHTML = kosztUlepszenia1;
 	if (szacunek >= 10) {
-		upgrade3Face.innerHTML = "Tytoń (+3 na kliknięcie)<br/>Koszt: <span id='koszt3'>200</span>";
+		upgrade3Face.innerHTML = "Tytoń (+3 na kliknięcie)<br/>Koszt: <span id='koszt3'>" + kosztUlepszenia3 + "</span>";
 		divUpgrade3.classList.remove("blocked");
-		divKoszt3.innerHTML = kosztUlepszenia3; //nie zmienia kosztu ulepszenia
-		statTytonFace.innerHTML = "Ile szlugów sprzedałeś:<br/><span id='tyton'></span>";
-		divTyton.innerHTML = tyton; //nie nalicza statystyki
+		statTytonFace.innerHTML = "Ile szlugów sprzedałeś:<br/><span id='tyton'>" + tyton + "</span>";
 		divStat3.classList.remove("blocked-stat");
 	}
 }
