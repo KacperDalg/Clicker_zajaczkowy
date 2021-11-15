@@ -136,7 +136,7 @@ function upgrade(p) {
 	ranga();
 }
 
-function achievement_palarnia_1(achievementUsed) {
+function achievement_palarnia_1() {
 	if (palarnia == 5) {
 		achievementPalarniaDiv1.classList.add("open-achievement");
 		achievementPalarniaDiv1.classList.remove("description-achievement");
