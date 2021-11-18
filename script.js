@@ -10,13 +10,14 @@ let zalki = 0;
 let petarda = 0;
 let oprowadzanie = 0;
 let ram = 0;
+let ulepszeniaGlobalne = 0;
 let kosztUlepszenia1 = 50;
 let kosztUlepszenia2 = 100;
-let kosztUlepszenia3 = 200;
-let kosztUlepszenia4 = 300;
-let kosztUlepszenia5 = 400;
-let kosztUlepszenia6 = 500;
-let kosztUlepszenia7 = 700;
+let kosztUlepszenia3 = 400;
+let kosztUlepszenia4 = 800;
+let kosztUlepszenia5 = 1500;
+let kosztUlepszenia6 = 2500;
+let kosztUlepszenia7 = 5000;
 let szacunekLvl2 = 10;
 let szacunekLvl3 = 25;
 let szacunekLvl4 = 40;
@@ -31,6 +32,7 @@ const divPerSecond = document.getElementById("per_second");
 const divKoszt = document.getElementById("koszt1");
 const divKoszt2 = document.getElementById("koszt2");
 const divKasaGlobalna = document.getElementById("kasa-globalna");
+const divUlepszeniaGlobalne = document.getElementById("ulepszenia-globalne");
 const divPalarnia = document.getElementById("palarnia");
 const divKoparka = document.getElementById("koparka");
 const divRanga = document.getElementById("nazwa-rangi");
@@ -73,6 +75,7 @@ function naSekunde() {
 
 function upgrade1() {
 	kasa = kasa - kosztUlepszenia1;
+	ulepszeniaGlobalne += 1;
 	perKlik += 1;
 	palarnia += 1;
 	szacunek += 1;
@@ -82,6 +85,7 @@ function upgrade1() {
 
 function upgrade2() {
 	kasa = kasa - kosztUlepszenia2;
+	ulepszeniaGlobalne += 1;
 	perSecond += 1;
 	koparka += 1;
 	szacunek += 2;
@@ -90,6 +94,7 @@ function upgrade2() {
 
 function upgrade3() {
 	kasa = kasa - kosztUlepszenia3;
+	ulepszeniaGlobalne += 1;
 	perKlik += 3;
 	tyton += 1;
 	szacunek += 3;
@@ -98,6 +103,7 @@ function upgrade3() {
 
 function upgrade4() {
 	kasa = kasa - kosztUlepszenia4;
+	ulepszeniaGlobalne += 1;
 	perSecond += 3;
 	zalki += 1;
 	szacunek += 4;
@@ -106,6 +112,7 @@ function upgrade4() {
 
 function upgrade5() {
 	kasa = kasa - kosztUlepszenia5;
+	ulepszeniaGlobalne += 1;
 	perKlik += 4;
 	oprowadzanie += 1;
 	szacunek += 5;
@@ -114,6 +121,7 @@ function upgrade5() {
 
 function upgrade6() {
 	kasa = kasa - kosztUlepszenia6;
+	ulepszeniaGlobalne += 1;
 	perSecond += 5;
 	petarda += 1;
 	szacunek -= 3;
@@ -122,6 +130,7 @@ function upgrade6() {
 
 function upgrade7() {
 	kasa = kasa - kosztUlepszenia7;
+	ulepszeniaGlobalne += 1;
 	perKlik += 6;
 	ram += 1;
 	szacunek += 7;
@@ -134,6 +143,7 @@ function wypisanie() {
 	divPerClick.innerHTML = perKlik;
 	divPerSecond.innerHTML = perSecond;
 	divKasaGlobalna.innerHTML = kasaGlobalna;
+	divUlepszeniaGlobalne.innerHTML = ulepszeniaGlobalne;
 	divPalarnia.innerHTML = palarnia;
 	divKoparka.innerHTML = koparka;
 	divKoszt2.innerHTML = kosztUlepszenia2;
@@ -189,14 +199,12 @@ function ranga() { //dodawanie rang
 	if (szacunek >= szacunekLvl5) {
 		divRanga.innerHTML = "Toaletowy piromanta";
 		opisRangi.innerHTML = "Twoja ponadprzeciętna inteligencja podpowiada Ci, że dobrym pomysłem byłoby odpalenie petardy w kiblu. Koledzy nie pochwalają tego pomysłu, ale przecież napewno nic złego się nie stanie.";
-		//dac -3 do szacunku przy upgradzie
 		image.style.backgroundImage = "url('img/piromanta.jpg')";
 	}
 	if (szacunek >= szacunekLvl6) {
 		divRanga.innerHTML = "Serwisant";
 		opisRangi.innerHTML = "Masz już całą wiedzę potrzebną do pracy w serwisie komputerowym. Dodatkowo zdobywasz kody nuklearne takie jak 'diablica44'. Dbasz o swój zeszyt na pendrivie, a do pracy jeszcze bardziej motywuje Cię ocena z wagą 100.";
 		image.style.backgroundImage = "url('img/bopo.png')";
-		//kradnij ram upgrade
 	}
 	if (szacunek >= szacunekLvl7) {
 		divRanga.innerHTML = "Trzecioklasista";

@@ -96,14 +96,14 @@ section {
 }
 
 #oprowadzanie-description {
-	top:-472px;
+	top: -472px;
 }
 
 #petarda-description {
 	top: -552px;
 }
 
-#ram-description{
+#ram-description {
 	top: -632px;
 }
 
@@ -122,7 +122,7 @@ section {
 	color: darkgrey;
 }
 
-.open-achievement{
+.open-achievement {
 	min-height: 10%;
 	width: 80%;
 	padding: 10px;
@@ -142,6 +142,11 @@ section {
 	line-height: 30px;
 	transition: .5s;
 	font-size: 15px;
+}
+
+.blocked>p,
+.blocked-stat>p {
+	color: gray;
 }
 
 .upgrade:hover .description-upgrade,
