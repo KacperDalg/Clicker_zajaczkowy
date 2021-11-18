@@ -95,6 +95,18 @@ section {
 	top: -392px;
 }
 
+#oprowadzanie-description {
+	top:-472px;
+}
+
+#petarda-description {
+	top: -552px;
+}
+
+#ram-description{
+	top: -632px;
+}
+
 .description-achievement {
 	min-height: 10%;
 	width: 80%;

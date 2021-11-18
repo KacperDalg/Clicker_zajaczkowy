@@ -7,12 +7,23 @@ let koparka = 0;
 let palarnia = 0;
 let tyton = 0;
 let zalki = 0;
+let petarda = 0;
+let oprowadzanie = 0;
+let ram = 0;
 let kosztUlepszenia1 = 50;
 let kosztUlepszenia2 = 100;
 let kosztUlepszenia3 = 200;
 let kosztUlepszenia4 = 300;
+let kosztUlepszenia5 = 400;
+let kosztUlepszenia6 = 500;
+let kosztUlepszenia7 = 700;
 let szacunekLvl2 = 10;
-let szacunekLvl3 = 20;
+let szacunekLvl3 = 25;
+let szacunekLvl4 = 40;
+let szacunekLvl5 = 60;
+let szacunekLvl6 = 80;
+let szacunekLvl7 = 105;
+let szacunekLvl8 = 130;
 const divSzacunek = document.getElementById("respect");
 const divHajs = document.getElementById("hajs");
 const divPerClick = document.getElementById("per_click");
@@ -33,6 +44,18 @@ const divUpgrade4 = document.getElementById("upgrade4");
 const upgrade4Face = document.getElementById("upgrade4-face");
 const divStat4 = document.getElementById("stat-zalki");
 const statZalkiFace = document.getElementById("stat-zalki-face");
+const divUpgrade5 = document.getElementById("upgrade5");
+const upgrade5Face = document.getElementById("upgrade5-face");
+const divStat5 = document.getElementById("stat-oprowadzanie");
+const statOprowadzanieFace = document.getElementById("stat-oprowadzanie-face");
+const divUpgrade6 = document.getElementById("upgrade6");
+const upgrade6Face = document.getElementById("upgrade6-face");
+const divStat6 = document.getElementById("stat-petarda");
+const statPetardaFace = document.getElementById("stat-petarda-face");
+const divUpgrade7 = document.getElementById("upgrade7");
+const upgrade7Face = document.getElementById("upgrade7-face");
+const divStat7 = document.getElementById("stat-ram");
+const statRamFace = document.getElementById("stat-ram-face");
 const achievementPalarniaDiv1 = document.getElementById("achievement-palarnia-div-1");
 const achievementPalarniaP1 = document.getElementById("achievement-palarnia-p-1");
 
@@ -45,7 +68,6 @@ function klik() {
 function naSekunde() {
 	kasaGlobalna += perSecond;
 	kasa += perSecond;
-	divHajs.innerHTML = kasa;
 	wypisanie();
 }
 
@@ -82,6 +104,30 @@ function upgrade4() {
 	kosztUlepszenia4 = parseInt(kosztUlepszenia4 * 1.5);
 }
 
+function upgrade5() {
+	kasa = kasa - kosztUlepszenia5;
+	perKlik += 4;
+	oprowadzanie += 1;
+	szacunek += 5;
+	kosztUlepszenia5 = parseInt(kosztUlepszenia5 * 1.5);
+}
+
+function upgrade6() {
+	kasa = kasa - kosztUlepszenia6;
+	perSecond += 5;
+	petarda += 1;
+	szacunek -= 3;
+	kosztUlepszenia4 = parseInt(kosztUlepszenia6 * 1.5);
+}
+
+function upgrade7() {
+	kasa = kasa - kosztUlepszenia7;
+	perKlik += 6;
+	ram += 1;
+	szacunek += 7;
+	kosztUlepszenia7 = parseInt(kosztUlepszenia7 * 1.5);
+}
+
 function wypisanie() {
 	divSzacunek.innerHTML = szacunek;
 	divHajs.innerHTML = kasa;
@@ -104,6 +150,24 @@ function wypisanie() {
 		statZalkiFace.innerHTML = "Ile zalek podrabiasz:<br/>" + zalki;
 		divStat4.classList.remove("blocked-stat");
 	}
+	if (szacunek >= szacunekLvl4) {
+		upgrade5Face.innerHTML = "Prowadź (+4 na kliknięcie)<br/>Koszt: " + kosztUlepszenia5;
+		divUpgrade5.classList.remove("blocked");
+		statOprowadzanieFace.innerHTML = "Ilu uczniów oprowadziłeś:<br/>" + oprowadzanie;
+		divStat5.classList.remove("blocked-stat");
+	}
+	if (szacunek >= szacunekLvl5) {
+		upgrade6Face.innerHTML = "Petarda (+5 na sekundę)<br/>Koszt: " + kosztUlepszenia6;
+		divUpgrade6.classList.remove("blocked");
+		statPetardaFace.innerHTML = "Ile petard wysadziłeś:<br/>" + petarda;
+		divStat6.classList.remove("blocked-stat");
+	}
+	if (szacunek >= szacunekLvl6) {
+		upgrade7Face.innerHTML = "RAM (+6 na sekundę)<br/>Koszt: " + kosztUlepszenia7;
+		divUpgrade7.classList.remove("blocked");
+		statRamFace.innerHTML = "Ile RAMu sprzedałeś:<br/>" + ram;
+		divStat7.classList.remove("blocked-stat");
+	}
 }
 
 function ranga() { //dodawanie rang
@@ -114,8 +178,35 @@ function ranga() { //dodawanie rang
 	}
 	if (szacunek >= szacunekLvl3) {
 		divRanga.innerHTML = "Douczony mistrzu";
-		opisRangi.innerHTML = "Coraz lepiej idzie ci zdobywanie kolejnych zalek. Znana fraza &quotDoucz się mistrzu&quot jest już dla ciebie tylko przeszłością.";
+		opisRangi.innerHTML = "Coraz lepiej idzie Ci zdobywanie kolejnych zalek. Znana fraza &quotDoucz się mistrzu&quot jest już dla ciebie tylko przeszłością.";
 		image.style.backgroundImage = "url('img/cool_kid.jpg')";
+	}
+	if (szacunek >= szacunekLvl4) {
+		divRanga.innerHTML = "Drugoklasista";
+		opisRangi.innerHTML = "Gratulacje! Udało Ci się przeżyć pierwszy rok w Zajączku. Wydawałoby się, że teraz nic w tej szkole nie powinno Cię już zaskoczyć... Chyba";
+		image.style.backgroundImage = "url('img/drugoklasista.jpg')";
+	}
+	if (szacunek >= szacunekLvl5) {
+		divRanga.innerHTML = "Toaletowy piromanta";
+		opisRangi.innerHTML = "Twoja ponadprzeciętna inteligencja podpowiada Ci, że dobrym pomysłem byłoby odpalenie petardy w kiblu. Koledzy nie pochwalają tego pomysłu, ale przecież napewno nic złego się nie stanie.";
+		//dac -3 do szacunku przy upgradzie
+		image.style.backgroundImage = "url('img/piromanta.jpg')";
+	}
+	if (szacunek >= szacunekLvl6) {
+		divRanga.innerHTML = "Serwisant";
+		opisRangi.innerHTML = "Masz już całą wiedzę potrzebną do pracy w serwisie komputerowym. Dodatkowo zdobywasz kody nuklearne takie jak 'diablica44'. Dbasz o swój zeszyt na pendrivie, a do pracy jeszcze bardziej motywuje Cię ocena z wagą 100.";
+		image.style.backgroundImage = "url('img/bopo.png')";
+		//kradnij ram upgrade
+	}
+	if (szacunek >= szacunekLvl7) {
+		divRanga.innerHTML = "Trzecioklasista";
+		opisRangi.innerHTML = "Możesz mówić o sobie jak o prawdziwym weteranie. Zaczynają denerwować Cię dziecinne zachowania młodszych roczników. Nie jesteś już zwykłym pionkiem na arenie międzyklasowej.";
+		image.style.backgroundImage = "url('img/cool_guy.jpg')";
+	}
+	if (szacunek >= szacunekLvl8) {
+		divRanga.innerHTML = "Bufetowy smakosz";
+		opisRangi.innerHTML = "Postanawiasz kupić obiad w szkolnym bufecie. Nigdy z niego nie korzystałeś bo wyjścia na palarnie miały większy priorytet. Przekonujesz się, że jedzenie w bufecie jest naprawdę pyszne, a jego sława nie wzięła się znikąd.";
+		image.style.backgroundImage = "url('img/bufet.jpg')";
 	}
 }
 
@@ -132,6 +223,15 @@ function upgrade(p) {
 	if (p == 4 && szacunek >= szacunekLvl3 && kasa >= kosztUlepszenia4) {
 		upgrade4();
 	}
+	if (p == 5 && szacunek >= szacunekLvl4 && kasa >= kosztUlepszenia5) {
+		upgrade5();
+	}
+	if (p == 6 && szacunek >= szacunekLvl5 && kasa >= kosztUlepszenia6) {
+		upgrade6();
+	}
+	if (p == 7 && szacunek >= szacunekLvl6 && kasa >= kosztUlepszenia7) {
+		upgrade7();
+	}
 	wypisanie();
 	ranga();
 }
@@ -145,4 +245,4 @@ function achievement_palarnia_1() {
 	}
 }
 
-window.setInterval(naSekunde, 1000)
+window.setInterval(naSekunde, 1000);
