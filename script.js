@@ -117,7 +117,7 @@ function upgrade6() {
 	perSecond += 5;
 	petarda += 1;
 	szacunek -= 3;
-	kosztUlepszenia4 = parseInt(kosztUlepszenia6 * 1.5);
+	kosztUlepszenia6 = parseInt(kosztUlepszenia6 * 1.5);
 }
 
 function upgrade7() {
